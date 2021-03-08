@@ -16,16 +16,24 @@ int main()
             cin>>m[i][j];
         }
     }
-
+    int num = 0;
     double temp=0;
-    for(int i=0;i<12;i++){
-        for (int j = 0; j < i; j++)
+    for(int i=1;i<6;i++){
+        for (int j = 12-i; j < 12; j++)
         {
+            num++;
+            temp+=m[i][j];
+        }
+    }
+    for(int i=6;i<11;i++){
+        for (int j = i+1; j  < 12; j++)
+        {
+            num++;
             temp+=m[i][j];
         }
     }
 
-    printf("%.1lf",c=='S'?temp:temp/66);
+    printf("%.1lf",c=='S'?temp:temp/num);
 
     return 0;
 }

@@ -18,8 +18,9 @@ int main()
     }
 
     double temp=0;
+
     for(int i=0;i<12;i++){
-        for (int j = 0; j < i; j++)
+        for (int j = 12-i; j < 12; j++)
         {
             temp+=m[i][j];
         }
